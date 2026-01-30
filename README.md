@@ -1,21 +1,41 @@
-const frases = [
-  "VOCÊ NÃO DEVIA TER ABERTO ISSO",
-  "REALIDADE CORROMPIDA",
-  "WUBBA LUBBA DUB DUB",
-  "DIMENSÃO INSTÁVEL",
-  "ERRO 404: SANIDADE"
-];
+body {
+  background: radial-gradient(circle, #0f0, #000);
+  color: #00ffcc;
+  font-family: monospace;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-function abrirPortal() {
-  document.body.style.background =
-    `hsl(${Math.random() * 360}, 100%, 10%)`;
+h1 {
+  text-shadow: 0 0 10px #00ff00;
+}
 
-  document.getElementById("texto").innerText =
-    frases[Math.floor(Math.random() * frases.length)];
+#portal {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ff00, #003300);
+  box-shadow: 0 0 30px #00ff00;
+  animation: girar 4s linear infinite;
+}
 
-  document.body.classList.add("shake");
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-  setTimeout(() => {
-    document.body.classList.remove("shake");
-  }, 300);
+button {
+  background: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00ff00;
+  color: black;
 }
