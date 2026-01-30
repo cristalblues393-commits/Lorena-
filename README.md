@@ -1,41 +1,20 @@
-body {
-  background: radial-gradient(circle, #0f0, #000);
-  color: #00ffcc;
-  font-family: monospace;
-  text-align: center;
-  height: 100vh;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Interdimensional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-h1 {
-  text-shadow: 0 0 10px #00ff00;
-}
+  <h1>🛸 PORTAL INTERDIMENSIONAL 🛸</h1>
 
-#portal {
-  width: 200px;
-  height: 200px;
-  margin: 30px auto;
-  border-radius: 50%;
-  background: radial-gradient(circle, #00ff00, #003300);
-  box-shadow: 0 0 30px #00ff00;
-  animation: girar 4s linear infinite;
-}
+  <div id="portal"></div>
 
-@keyframes girar {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+  <p id="texto">Realidade estável… por enquanto.</p>
 
-button {
-  background: black;
-  color: #00ff00;
-  border: 2px solid #00ff00;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
+  <button onclick="abrirPortal()">ABRIR PORTAL</button>
 
-button:hover {
-  background: #00ff00;
-  color: black;
-}
+  <script src="script.js"></script>
+</body>
+</html>
